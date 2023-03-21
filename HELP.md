@@ -49,14 +49,14 @@ for example : Create an interface that extends Spring Data JPA's JpaRepository i
 - Create a Service layer: Create a service class that implements the business logic for your application. This class will use the repository to interact with the database and perform any necessary transformations on the data.
 
 for example 
-###- implements the service class with respective test class for bussiness logic for your Post entity - In ChatGPT 
+### implements the service class with respective test class for bussiness logic for your Post entity - In ChatGPT 
 
-###- Create a Controller: Create a controller class that handles incoming HTTP requests and maps them to appropriate service methods. Use annotations to define the HTTP methods and URLs for each endpoint.
+### Create a Controller: Create a controller class that handles incoming HTTP requests and maps them to appropriate service methods. Use annotations to define the HTTP methods and URLs for each endpoint.
 
 for example 
- ###- implements the controller class with their respective test class and custom exceptions that handles incoming HTTP requests and maps them to appropriate service methods. Use annotations to define the HTTP methods and URLs for each endpoint. - In ChatGPT
+ ### implements the controller class with their respective test class and custom exceptions that handles incoming HTTP requests and maps them to appropriate service methods. Use annotations to define the HTTP methods and URLs for each endpoint. - In ChatGPT
 
-###- implements the controlleradvice for the Postcontroller - In ChatGPT 
+### implements the controlleradvice for the Postcontroller - In ChatGPT 
 
  - Test your API: Use a tool like Postman to test your API endpoints and make sure they are working as expected.
 
