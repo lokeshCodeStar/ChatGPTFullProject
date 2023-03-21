@@ -90,6 +90,22 @@ Push the Docker image to a Docker registry, such as Docker Hub, Google Container
 
 Create a Kubernetes deployment file (deployment.yaml) that specifies the Docker image, the number of replicas, and other configuration options. Here's an example deployment.yaml file:
 
+
+
+
+### Outcome : -
+
+### Pros : 
+-	Usually for the  Creating a Rest API with respective Junit usually take one iterative sprint  –  10 days  * 1 person =  10 days/person ~ 90 hrs/person(exclude deployment in K8’s).
+-	By Using the ChatGPT we are able to are able to completed Java Junit Sample Code in the few hours –  5 hrs *  1 person =  5 hrs/person. Total time save = 85 hrs/person(exclude deployment in K8’s).
+-	It help us learn the code if we are not aware of code which mean dependency of person will  be less.
+-	Jenkins Pipeline through ChatGPT
+### Cons : 
+-	Prior knowledge of language like JAVA,  is required for the understanding for the code and troubleshooting.
+-	Lack of empathy.
+-	Resource reduction. 
+
+
 Create a Kubernetes service file (service.yaml) that specifies how to expose the deployment to the outside world. Here's an example service.yaml file:
 
 Deploy the application to Kubernetes using kubectl commands:
