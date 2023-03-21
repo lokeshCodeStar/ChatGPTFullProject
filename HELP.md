@@ -37,14 +37,15 @@ Here are the steps for implementing a REST API in Spring Boot that interacts wit
 - Define your data model: Create Java classes to represent the entities in your database. Use annotations to map them to database tables and define relationships between entities.
 
 for example 
-Create a spring boot entity for a Post entity includes the attributes -id, -title,  -content,- slug, LocalDateTime dateCreated, LocalDateTime dateUpdated - In ChatGPT
+###Create a spring boot entity for a Post entity includes the attributes -id, -title,  -content,- slug, LocalDateTime dateCreated, LocalDateTime dateUpdated - In ChatGPT
 
 
 - Set up your database: Create a database in your preferred DBMS, and configure your application's connection to the database using the applirties or application.yml file.
 
 - Create a Repository: Create an interface that extends Spring Data JPA's JpaRepository interface. This interface will provide methods for accessing your data and performing CRUD operations.
 
-for example : Create an interface that extends Spring Data JPA's JpaRepository interface for above post entity. - In ChatGPT
+for example :
+###Create an interface that extends Spring Data JPA's JpaRepository interface for above post entity. - In ChatGPT
 
 - Create a Service layer: Create a service class that implements the business logic for your application. This class will use the repository to interact with the database and perform any necessary transformations on the data.
 
