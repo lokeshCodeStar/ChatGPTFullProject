@@ -18,4 +18,5 @@ public class PostControllerAdvice {
     public ResponseEntity<String> handlePostNotFoundException(PostNotFoundException e) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
     }
+
 }
