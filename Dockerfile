@@ -2,7 +2,7 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 
 # Set the working directory to /app
-MAINTAINER baeldung.com
+MAINTAINER Lokesh
 
 
 # Copy the build artifact from the build stage to /app
