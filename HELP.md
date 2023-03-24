@@ -25,7 +25,7 @@ The following guides illustrate how to use some features concretely:
 
 ## ###################################################################################################################
 
-what are the list of step for implement a Rest API in Springboot that interact with database ?
+# what are the list of step for implement a Rest API in Springboot that interact with database ?
 
 
 
@@ -33,17 +33,33 @@ Here are the steps for implementing a REST API in Spring Boot that interacts wit
 
 - Set up your project: Create a new Spring Boot project in your preferred IDE, and add the necessary dependencies for Spring Web, Spring Data JPA, and your database driver.
 
+
 - Define your data model: Create Java classes to represent the entities in your database. Use annotations to map them to database tables and define relationships between entities.
 
-- Set up your database: Create a database in your preferred DBMS, and configure your application's connection to the database using the application.properties or application.yml file.
+for example 
+### Create a spring boot entity for a Post entity includes the attributes -id, -title,  -content,- slug, LocalDateTime dateCreated, LocalDateTime dateUpdated - In ChatGPT
+
+
+- Set up your database: Create a database in your preferred DBMS, and configure your application's connection to the database using the applirties or application.yml file.
 
 - Create a Repository: Create an interface that extends Spring Data JPA's JpaRepository interface. This interface will provide methods for accessing your data and performing CRUD operations.
 
+for example :
+### Create an interface that extends Spring Data JPA's JpaRepository interface for above post entity. - In ChatGPT
+
 - Create a Service layer: Create a service class that implements the business logic for your application. This class will use the repository to interact with the database and perform any necessary transformations on the data.
 
-- Create a Controller: Create a controller class that handles incoming HTTP requests and maps them to appropriate service methods. Use annotations to define the HTTP methods and URLs for each endpoint.
+for example 
+### implements the service class with respective test class for bussiness logic for your Post entity - In ChatGPT 
 
-- Test your API: Use a tool like Postman to test your API endpoints and make sure they are working as expected.
+### Create a Controller: Create a controller class that handles incoming HTTP requests and maps them to appropriate service methods. Use annotations to define the HTTP methods and URLs for each endpoint.
+
+for example 
+ ### implements the controller class with their respective test class and custom exceptions that handles incoming HTTP requests and maps them to appropriate service methods. Use annotations to define the HTTP methods and URLs for each endpoint. - In ChatGPT
+
+### implements the controlleradvice for the Postcontroller - In ChatGPT 
+
+ - Test your API: Use a tool like Postman to test your API endpoints and make sure they are working as expected.
 
 - Add security (optional): Implement security measures such as authentication and authorization to protect your API.
 
@@ -52,8 +68,8 @@ Here are the steps for implementing a REST API in Spring Boot that interacts wit
 - Monitor and maintain your application: Monitor your application's performance and logs, and make any necessary updates or bug fixes to ensure its continued success.
 
 
-=========================================================================================================================================================================================
-
+=======================================================================================================================================================================
+### Docker Implementation 
 Assuming the name of the built JAR file is my-spring-boot-app.jar, you can build the Docker image with the following command:
 
 
@@ -66,6 +82,7 @@ This will start the container and map port 8080 on the host to port 8080 inside 
 
 ##############################################################################################################################
 
+### Kubernates Implementation 
 Sure, here are the steps to deploy a Spring Boot application on Kubernetes:
 
 Create a Docker image of your Spring Boot application using a Dockerfile as explained in the previous answer.
@@ -73,6 +90,7 @@ Create a Docker image of your Spring Boot application using a Dockerfile as expl
 Push the Docker image to a Docker registry, such as Docker Hub, Google Container Registry (GCR), or Amazon Elastic Container Registry (ECR).
 
 Create a Kubernetes deployment file (deployment.yaml) that specifies the Docker image, the number of replicas, and other configuration options. Here's an example deployment.yaml file:
+
 
 Create a Kubernetes service file (service.yaml) that specifies how to expose the deployment to the outside world. Here's an example service.yaml file:
 
@@ -108,3 +126,17 @@ selector: This field specifies the labels that the service should use to select 
 ports: This field specifies the ports that the service will expose. In this example, we're exposing port 80 (named "http") on the service, and forwarding traffic to port 8080 on the pods.
 
 type: This field specifies the type of service. In this example, we're using a LoadBalancer type, which creates an external IP address that routes traffic to the service.
+
+
+### Outcome : -
+
+### Pros : 
+-	Usually for the  Creating a Rest API with respective Junit usually take one iterative sprint  –  10 days  * 1 person =  10 days/person ~ 90 hrs/person(exclude deployment in K8’s).
+-	By Using the ChatGPT we are able to are able to completed Java Junit Sample Code in the few hours –  5 hrs *  1 person =  5 hrs/person. Total time save = 85 hrs/person(exclude deployment in K8’s).
+-	It help us learn the code if we are not aware of code which mean dependency of person will  be less.
+-	Jenkins Pipeline through ChatGPT
+### Cons : 
+-	Prior knowledge of language like JAVA,  is required for the understanding for the code and troubleshooting.
+-	Lack of empathy.
+-	Resource reduction. 
+
