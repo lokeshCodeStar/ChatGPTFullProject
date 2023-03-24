@@ -15,9 +15,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: azure/docker-login@v1
         with:
-          login-server: chatgptrepo.azurecr.io
-          username: chatGPTRepo
-          password: awIYlh8MjP7qGVoAGMRaQ9PZx/QlRuPvdVu6l6BSDg+ACRDTMAgj
+          login-server: ${{ secrets.ACR_ENDPOINT }}
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
       - run: |
-          docker build . -t chatgptrepo.azurecr.io/chatGPTRepo:${{ github.sha }}
-          docker push chatgptrepo.azurecr.io/chatGPTRepo:${{ github.sha }}
+          docker build . -t ${{ secrets.ACR_ENDPOINT }}/chatGPTRepo:${{ github.sha }}
+          docker push ${{ secrets.ACR_ENDPOINT }}/chatGPTRepo:${{ github.sha }}
