@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-spring-boot-app
+  name: my-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-spring-boot-app
+      app: my-app
   template:
     metadata:
       labels:
-        app: my-spring-boot-app
+        app: my-app
     spec:
       containers:
-        - name: my-spring-boot-app
-          image: my-docker-registry/my-spring-boot-app:latest
+        - name: my-app
+          image: my-docker-registry/my-spring-boot-app:latest  # Container URL image
           ports:
             - containerPort: 8080
