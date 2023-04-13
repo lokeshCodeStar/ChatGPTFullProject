@@ -13,7 +13,7 @@ MAINTAINER lokesh
 #
 ## Copy the build artifact from the build stage to /app
 WORKDIR /
-ADD target/DemoChatGptApp-0.0.1-SNAPSHOT.jar app.jar
+ADD target/*.jar app.jar
 #
 ## Expose the port that the application listens on
 EXPOSE 8080
