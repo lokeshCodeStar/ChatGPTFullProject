@@ -3,17 +3,18 @@
 # COPY src /src
 # COPY pom.xml /
 
-# RUN mvn -f /pom.xml clean package -DskipTests
+#stat RUN mvn -f /pom.xml clean package -DskipTests
 
 FROM openjdk:17-jdk-slim
 #
 ## Set the working directory to /app
+VOLUME /tmp
 MAINTAINER lokesh
 #
 #
 ## Copy the build artifact from the build stage to /app
-WORKDIR /
-ADD target/*.jar app.jar
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
 #
 ## Expose the port that the application listens on
 EXPOSE 8080
