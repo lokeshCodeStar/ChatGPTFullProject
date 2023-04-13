@@ -1,7 +1,0 @@
-com\demochatgptapp\repository\PostRepository.class
-com\demochatgptapp\entity\Post.class
-com\demochatgptapp\controller\PostControllerAdvice.class
-com\demochatgptapp\DemoChatGptAppApplication.class
-com\demochatgptapp\controller\PostController.class
-com\demochatgptapp\exception\PostNotFoundException.class
-com\demochatgptapp\service\PostService.class
